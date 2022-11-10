@@ -194,6 +194,10 @@ main {
     color: var(--Blue);
 }
 
+.unread:hover {
+    background-color: var(--Verylightgrayishblue);
+}
+
 
 @media screen and (max-width:590px) {
     html {
