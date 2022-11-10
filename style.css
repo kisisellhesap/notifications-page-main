@@ -194,7 +194,7 @@ main {
     color: var(--Blue);
 }
 
-.unread:hover {
+.notification:hover {
     background-color: var(--Verylightgrayishblue);
 }
 
