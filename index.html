@@ -141,32 +141,20 @@
   Anna Kim left the group Chess Club
   2 weeks ago -->
   <script>
-    let unread = [];
-    unreadLength();
 
 
-    function unreadLength() {
+    document.querySelector(".length").textContent = document.querySelectorAll(".unread").length;
 
-
-      for (let not of document.querySelectorAll(".notification")) {
-        if (not.classList.contains("unread")) {
-          unread.push(not);
-          document.querySelector(".length").textContent = unread.length;
-
-
-        }
-      }
-    }
 
     document.querySelector(".btn-read").addEventListener("click", function () {
 
       for (let not of document.querySelectorAll(".notification")) {
 
         if (not.classList.contains("unread")) {
-          unread.splice(0, 1);
-          document.querySelector(".length").textContent = unread.length;
           not.classList.remove("unread");
+          document.querySelector(".length").textContent = document.querySelectorAll(".unread").length;
           document.querySelector(".pink-circle").remove();
+
         }
       }
     });
